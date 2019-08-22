@@ -1,0 +1,3 @@
+[submodule "newRealEstate"]
+	path = newRealEstate
+	url = https://github.com/Bryang09/newRealEstate.git
