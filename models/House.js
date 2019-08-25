@@ -14,6 +14,10 @@ const HouseSchema = new Schema({
     type: String,
     required: true
   },
+  yearBuilt: {
+    type: String,
+    required: true
+  },
   img: [
     {
       type: String

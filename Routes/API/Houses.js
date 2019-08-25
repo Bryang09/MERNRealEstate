@@ -30,7 +30,8 @@ router.post("/", (req, res) => {
     rooms: req.body.rooms,
     restRooms: req.body.restRooms,
     likes: req.body.likes,
-    img: req.body.img
+    img: req.body.img,
+    yearBulit: req.body.yearBulit
   });
 
   newHouse.save().then(item => res.json(item));
