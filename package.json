@@ -7,17 +7,9 @@
     "start": "node server.js",
     "server": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bryang09/realEstate.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bryang09/realEstate/issues"
-  },
-  "homepage": "https://github.com/Bryang09/realEstate#readme",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.2",
