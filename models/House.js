@@ -15,10 +15,6 @@ const HouseSchema = new Schema({
       type: String
     }
   ],
-  size: {
-    type: Number,
-    required: true
-  },
   rooms: {
     type: Number,
     required: true

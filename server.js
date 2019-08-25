@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const items = require("./Routes/API/Houses");
+
 // BODY PARSER MIDDLEWARE
 app.use(bodyParser.json());
 
@@ -15,6 +17,8 @@ mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log(err));
+
+app.use("/api/houses", items);
 
 const port = process.env.PORT || 5000;
 
