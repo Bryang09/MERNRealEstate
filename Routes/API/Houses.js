@@ -37,10 +37,20 @@ router.post("/", (req, res) => {
   newHouse.save().then(item => res.json(item));
 });
 
-// @route GET api/houses
-// @desc  GET all houses
+// @route PUT api/houses/:id
+// @desc  Update Likes
 
-// @route GET api/houses
-// @desc  GET all houses
+router.put("/:id", (req, res) => {
+  const id = req.params.id;
+  House.findById(id, (err, house) => {
+    console.log(house.likes);
+
+    house.likes = req.body.likes;
+    house
+      .save()
+      .then(house => res.json(house))
+      .catch(err => console.log(err));
+  });
+});
 
 module.exports = router;
