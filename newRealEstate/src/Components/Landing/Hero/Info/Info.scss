@@ -1,0 +1,78 @@
+// $mainColor: #17c77c;
+$mainColor: #4ddbff;
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-weight: 400;
+    border-bottom: 0.6px solid #c8c8c8;
+
+    span {
+      color: #7d7979;
+    }
+  }
+
+  .link,
+  a {
+    padding: 1.5vh 2vw;
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    background: $mainColor;
+    border-radius: 35px;
+    color: #fff;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: lighten($mainColor, 2%);
+    }
+    h4 {
+      margin: 0%;
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  input[type="number"] {
+    border: 1px solid #fff;
+    padding: 1vh 1vw;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 3vh;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.pageDesc {
+  width: 80%;
+  height: 20vh;
+
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    color: lighten(#7d7979, 5%);
+
+    span {
+      text-transform: uppercase;
+      color: $mainColor;
+    }
+  }
+}

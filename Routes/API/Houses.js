@@ -43,8 +43,6 @@ router.post("/", (req, res) => {
 router.put("/:id", (req, res) => {
   const id = req.params.id;
   House.findById(id, (err, house) => {
-    console.log(house.likes);
-
     house.likes = req.body.likes;
     house
       .save()

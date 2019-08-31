@@ -1,0 +1,131 @@
+.Search {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .imgGalleryContainer {
+    display: flex;
+    height: 80%;
+    width: 90%;
+    overflow-y: auto;
+    margin-left: 4vw;
+    margin-top: 5vh;
+    margin: 5vh 5vw 0;
+    flex-wrap: wrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .imgContainer {
+      min-width: 48%;
+      height: 70%;
+      margin: 1%;
+      justify-content: center;
+      align-items: flex-end;
+
+      .img {
+        height: 100%;
+        transition: 1s ease;
+        background: #efefef no-repeat center center / cover;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .info {
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s ease;
+        opacity: 0;
+        display: flex;
+        justify-content: flex-end;
+
+        &:hover {
+          opacity: 1;
+          background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+        }
+
+        .infoContainer {
+          display: flex;
+          height: 40%;
+          width: 90%;
+          align-items: flex-end;
+          justify-content: center;
+
+          .information {
+            width: 30%;
+            margin: auto 1.5%;
+            text-align: center;
+
+            svg {
+              color: #ff6868;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // $ yarn add @fortawesome/fontawesome-svg-core
+  // $ yarn add @fortawesome/free-solid-svg-icons
+  // $ yarn add @fortawesome/react-fontawesome
+
+  .top {
+    display: flex;
+    margin-top: 15vh;
+    width: 88vw;
+
+    .sort {
+      width: 60%;
+      display: flex;
+
+      .option {
+        width: 21%;
+        margin: auto 2%;
+        text-align: center;
+        border-radius: 35px;
+        font-weight: 400;
+        padding: 1vh 0;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .lowToHigh {
+        background: #61ecbc;
+      }
+      .highToLow {
+        background: #4ddbff;
+      }
+
+      .smallToLarge {
+        background: #c170f9;
+      }
+      .largeToSmall {
+        background: #ff6868;
+      }
+    }
+
+    .location {
+      width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      h3 {
+        color: #cecece;
+
+        span {
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+#houseLink {
+  margin-top: 2vh;
+  padding: 1vh 3vw;
+}

@@ -1,0 +1,14 @@
+.Home {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  transition: 1s ease;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.Scroll {
+  overflow-x: auto;
+}

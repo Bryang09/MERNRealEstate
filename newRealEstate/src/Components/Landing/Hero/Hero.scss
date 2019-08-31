@@ -1,0 +1,21 @@
+.Hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  .heroImage {
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(https://photos.zillowstatic.com/cc_ft_1536/IS2zbv7y8krtbo0000000000.webp)
+        no-repeat center center / cover;
+  }
+  .info {
+    width: 30%;
+  }
+}
+
+.Hero .search {
+  width: 100vw;
+  transition: 1s ease;
+}

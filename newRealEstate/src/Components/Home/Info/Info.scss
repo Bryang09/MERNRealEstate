@@ -1,0 +1,123 @@
+$mainColor: #4ddbff;
+
+.homeInfo {
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  transition: 0.4s linear;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  height: 100vh;
+  animation: 2s infoReveal linear forwards;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    translate: 2s ease;
+
+    svg {
+      margin-right: 0.8vw;
+    }
+
+    .label {
+      color: #ababab;
+      letter-spacing: 1.5px;
+    }
+
+    .name {
+      h2 {
+        font-size: 35px;
+      }
+    }
+
+    .hardInfo {
+      display: flex;
+
+      .rooms {
+        width: 60%;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+
+  .seeMore {
+    h4 {
+      padding: 2vh 2vw;
+      background: $mainColor;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 35px;
+    }
+  }
+
+  .share {
+    margin: auto 4vw;
+  }
+
+  .mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background: $mainColor;
+      box-shadow: 1px 1px 17px $mainColor;
+      transition: 1s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.none {
+  pointer-events: none;
+  animation: 2s info linear forwards;
+}
+
+.section {
+  height: 15vh;
+}
+
+@keyframes info {
+  0% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(50vw);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes infoReveal {
+  0% {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}

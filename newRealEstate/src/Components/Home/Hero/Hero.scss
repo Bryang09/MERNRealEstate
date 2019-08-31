@@ -1,0 +1,66 @@
+.homeHero {
+  min-width: 100vw;
+  height: 100vh;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transition: 0.7s ease-in-out;
+  animation: normal 1s linear;
+
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  h3 {
+    text-align: center;
+    margin-top: 15vh;
+    color: #fff;
+  }
+}
+
+.full {
+  min-width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 2;
+  position: static;
+  top: 0;
+  left: 0;
+}
+
+.escapeButton {
+  top: 10vh;
+  right: 2vw;
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #4ddbff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: escape 5s linear;
+  transition: 1s ease;
+  &:hover {
+    background: #998cec;
+    // background: #6adc6a;
+  }
+}
+
+@keyframes normal {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
