@@ -10,7 +10,7 @@ const Buttons = props => {
 
       {/* THIS WILL OPEN THE SHARE MODAL */}
       <div className="share">
-        <h4>
+        <h4 style={{ cursor: "pointer" }}>
           <i className="fa fa-share" onClick={onShare} />
         </h4>
       </div>
