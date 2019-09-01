@@ -28,14 +28,6 @@ const HomeHero = props => {
   });
 
   return result;
-  // ? (
-  //   result
-  // ) : (
-  //   <div
-  //     className="homeHero"
-  //     style={{ backgroundImage: `url(${house.img[0]})` }}
-  //   />
-  // );
 };
 
 export default HomeHero;

@@ -16,10 +16,13 @@ const HomeInfo = props => {
     house,
     onLike,
     id,
-    alreadyLiked
+    alreadyLiked,
+    share
   } = props;
 
-  const isLiked = <FontAwesomeIcon icon={faHeart} color={"red"} />;
+  const isLiked = (
+    <FontAwesomeIcon icon={faHeart} color={"red"} id={"heartIcon"} />
+  );
 
   const notLiked = (
     <FontAwesomeIcon
@@ -27,14 +30,15 @@ const HomeInfo = props => {
       color={"#333"}
       onClick={onLike}
       style={{ cursor: "pointer" }}
+      id={"heartIcon"}
     />
   );
 
   const filter =
     alreadyLiked !== null ? alreadyLiked.filter(res => res === id) : null;
-  console.log(filter == id);
-  console.log(filter);
-  console.log(alreadyLiked);
+
+  console.log(house);
+
   return (
     <div className={more ? "homeInfo none" : "homeInfo"}>
       <div
@@ -44,7 +48,7 @@ const HomeInfo = props => {
         <div className="name">
           <h2>{house.name} </h2>
           <h4>
-            <span style={{ marginRight: "3vw" }}>
+            <span id={"likes"}>
               {alreadyLiked !== null
                 ? filter == id
                   ? isLiked

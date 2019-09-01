@@ -87,6 +87,17 @@ $mainColor: #4ddbff;
   }
 }
 
+#likes {
+  transition: 1s ease;
+  margin-right: 3vw;
+}
+
+#heartIcon {
+  transition: 1s ease;
+  &:hover {
+    color: red;
+  }
+}
 .none {
   pointer-events: none;
   animation: 2s info linear forwards;

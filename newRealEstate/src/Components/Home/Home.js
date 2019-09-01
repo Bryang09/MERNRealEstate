@@ -7,8 +7,7 @@ import axios from "axios";
 
 import "./Home.scss";
 import { LOCAL_REQUEST } from "../../keys";
-
-const alreadyLiked = JSON.parse(localStorage.getItem("ID"));
+import Share from "./Info/ShareModal/Share";
 
 class Home extends Component {
   state = {
@@ -16,7 +15,7 @@ class Home extends Component {
     id: null,
     house: null,
     housesLiked: [],
-    liked: []
+    share: false
   };
 
   onGetRequest = () => {
@@ -38,9 +37,8 @@ class Home extends Component {
   };
 
   onSeeMore = () => this.setState({ seeMore: !this.state.seeMore });
-
+  onShare = () => this.setState({ share: !this.state.share });
   onMail = () => alert("Mail");
-  onShare = () => alert("Share");
 
   onLike = e => {
     e.preventDefault();
@@ -59,8 +57,8 @@ class Home extends Component {
       .then(() =>
         this.setState(
           housesLiked === null || housesLiked === []
-            ? { housesLiked: [id], liked: true }
-            : { housesLiked: [...this.state.housesLiked, id], liked: true },
+            ? { housesLiked: [id] }
+            : { housesLiked: [...this.state.housesLiked, id] },
           this.onAddToLocalStorage,
           this.onGetRequest()
         )
@@ -74,11 +72,9 @@ class Home extends Component {
   };
 
   render() {
-    const { seeMore, house, liked, housesLiked } = this.state;
+    const { seeMore, house, share, housesLiked } = this.state;
 
-    const alreadyLiked = JSON.parse(localStorage.getItem("ID"));
-
-    console.log(house);
+    console.log(share);
 
     return (
       <div
@@ -88,11 +84,19 @@ class Home extends Component {
         <Nav />
 
         {house !== null ? (
-          <HomeHero
-            more={seeMore}
-            seeMore={this.onSeeMore}
-            house={house !== null ? house : null}
-          />
+          <>
+            <HomeHero
+              more={seeMore}
+              seeMore={this.onSeeMore}
+              house={house !== null ? house : null}
+              share={share}
+            />
+            <Share
+              img={house !== null ? house.img[0] : null}
+              share={share}
+              onShare={this.onShare}
+            />
+          </>
         ) : (
           <h1>Loading</h1>
         )}
@@ -106,6 +110,7 @@ class Home extends Component {
           onLike={this.onLike}
           id={this.props.match.params.id}
           alreadyLiked={housesLiked}
+          share={share}
         />
       </div>
     );
