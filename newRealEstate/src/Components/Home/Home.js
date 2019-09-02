@@ -9,6 +9,7 @@ import "./Home.scss";
 import { LOCAL_REQUEST } from "../../keys";
 import Share from "./Info/ShareModal/Share";
 import Mail from "./Info/MailModal/Mail";
+import Sent from "./MailSent/Sent";
 
 class Home extends Component {
   state = {
@@ -21,7 +22,8 @@ class Home extends Component {
     name: "",
     email: "",
     phone: "",
-    submit: false
+    submit: false,
+    closeSuccess: false
   };
 
   onGetRequest = () => {
@@ -50,6 +52,7 @@ class Home extends Component {
   onShare = () => this.setState({ share: !this.state.share });
   onMail = () => this.setState({ mail: !this.state.mail });
   onMailSubmit = () => this.setState({ submit: true });
+  onCloseSuccess = () => this.setState({ closeSuccess: true });
 
   onLike = e => {
     e.preventDefault();
@@ -92,8 +95,11 @@ class Home extends Component {
       name,
       email,
       phone,
-      submit
+      submit,
+      closeSuccess
     } = this.state;
+
+    console.log(submit, closeSuccess);
 
     // console.log(`Name: ${name}, Email: ${email}, Phone: ${phone}`);
 
@@ -127,6 +133,14 @@ class Home extends Component {
               email={email}
               phone={phone}
               onSubmit={this.onMailSubmit}
+              submit={submit}
+            />
+            <Sent
+              name={name}
+              email={email}
+              phone={phone}
+              closeSuccess={closeSuccess}
+              onCloseSuccess={this.onCloseSuccess}
               submit={submit}
             />
           </>

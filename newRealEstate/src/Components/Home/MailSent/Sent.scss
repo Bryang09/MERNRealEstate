@@ -1,0 +1,41 @@
+.Sent {
+  position: absolute;
+  top: 10px;
+  left: 30%;
+  width: 380px;
+  background: #dff2bf;
+  color: #4f8a10;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  transition: 1s ease;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  h4,
+  h5 {
+    font-weight: 400;
+  }
+}
+
+.radio {
+  padding-bottom: 2vh;
+}
+
+.successNotNow {
+  h6 {
+    border-bottom: 1px dashed #4f8a10;
+    cursor: pointer;
+  }
+}
