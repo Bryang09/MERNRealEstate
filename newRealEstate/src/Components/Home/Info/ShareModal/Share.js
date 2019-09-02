@@ -12,7 +12,6 @@ import "./Share.scss";
 const Share = props => {
   const { img, onShare, share } = props;
 
-  console.log(img);
   return (
     <section
       className="Share"

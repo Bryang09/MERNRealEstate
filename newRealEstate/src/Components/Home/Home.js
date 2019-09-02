@@ -17,7 +17,10 @@ class Home extends Component {
     house: null,
     housesLiked: [],
     share: false,
-    mail: false
+    mail: false,
+    name: "",
+    email: "",
+    phone: ""
   };
 
   onGetRequest = () => {
@@ -36,6 +39,10 @@ class Home extends Component {
     this.setState({ housesLiked: theHousesLiked });
 
     this.onGetRequest();
+  };
+
+  onMailInfo = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   onSeeMore = () => this.setState({ seeMore: !this.state.seeMore });
@@ -74,9 +81,18 @@ class Home extends Component {
   };
 
   render() {
-    const { seeMore, house, share, housesLiked, mail } = this.state;
+    const {
+      seeMore,
+      house,
+      share,
+      housesLiked,
+      mail,
+      name,
+      email,
+      phone
+    } = this.state;
 
-    console.log(share);
+    // console.log(`Name: ${name}, Email: ${email}, Phone: ${phone}`);
 
     return (
       <div
@@ -103,6 +119,10 @@ class Home extends Component {
               mail={mail}
               onMail={this.onMail}
               name={house !== null ? house.name : null}
+              info={this.onMailInfo}
+              name={name}
+              email={email}
+              phone={phone}
             />
           </>
         ) : (

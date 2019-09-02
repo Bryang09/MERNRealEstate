@@ -1,19 +1,11 @@
 import React from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
-
 import "../ShareModal/Share.scss";
 import "./Mail.scss";
 
 const Mail = props => {
-  const { img, onMail, mail, name } = props;
+  const { img, onMail, mail, name, info } = props;
 
-  console.log(img);
   return (
     <section
       className="Mail"
@@ -36,6 +28,7 @@ const Mail = props => {
                     name="name"
                     id=""
                     placeholder="Type Name Here"
+                    onChange={info}
                   />
                 </div>
                 <div className="input">
@@ -44,14 +37,16 @@ const Mail = props => {
                     name="phone"
                     id=""
                     placeholder="Enter Phone Number"
+                    onChange={info}
                   />
                 </div>
                 <div className="input">
                   <input
                     type="email"
-                    name="mail"
+                    name="email"
                     id=""
                     placeholder="Enter Email"
+                    onChange={info}
                   />
                 </div>
               </form>

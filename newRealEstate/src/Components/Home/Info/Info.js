@@ -16,8 +16,7 @@ const HomeInfo = props => {
     house,
     onLike,
     id,
-    alreadyLiked,
-    share
+    alreadyLiked
   } = props;
 
   const isLiked = (
