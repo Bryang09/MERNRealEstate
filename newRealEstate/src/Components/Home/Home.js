@@ -20,7 +20,8 @@ class Home extends Component {
     mail: false,
     name: "",
     email: "",
-    phone: ""
+    phone: "",
+    submit: false
   };
 
   onGetRequest = () => {
@@ -48,6 +49,7 @@ class Home extends Component {
   onSeeMore = () => this.setState({ seeMore: !this.state.seeMore });
   onShare = () => this.setState({ share: !this.state.share });
   onMail = () => this.setState({ mail: !this.state.mail });
+  onMailSubmit = () => this.setState({ submit: true });
 
   onLike = e => {
     e.preventDefault();
@@ -89,7 +91,8 @@ class Home extends Component {
       mail,
       name,
       email,
-      phone
+      phone,
+      submit
     } = this.state;
 
     // console.log(`Name: ${name}, Email: ${email}, Phone: ${phone}`);
@@ -118,11 +121,13 @@ class Home extends Component {
               img={house !== null ? house.img[1] : null}
               mail={mail}
               onMail={this.onMail}
-              name={house !== null ? house.name : null}
+              houseName={house !== null ? house.name : null}
               info={this.onMailInfo}
               name={name}
               email={email}
               phone={phone}
+              onSubmit={this.onMailSubmit}
+              submit={submit}
             />
           </>
         ) : (
