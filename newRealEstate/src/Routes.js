@@ -13,7 +13,7 @@ const Routes = () => {
         path="/search/:zip"
         render={props => <Search key={props.match.params.zip} {...props} />}
       />
-      <Route path="/home/:id" component={Home} />
+      <Route path="/home/:zip/:id" component={Home} />
     </Switch>
   );
 };

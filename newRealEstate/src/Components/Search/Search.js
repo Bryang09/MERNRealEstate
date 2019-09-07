@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Main from "./Main/Main";
+import ErrorComponent from "../Error/Error";
 
 import "./Search.scss";
 import { LOCAL_REQUEST } from "../../keys";
@@ -55,8 +56,7 @@ class Search extends Component {
       <div className="Search">
         {zip === false ? (
           <>
-            <h1>Something Went Wrong</h1>
-            <Link to="/">Return</Link>{" "}
+            <ErrorComponent />{" "}
           </>
         ) : (
           <Main
@@ -66,6 +66,7 @@ class Search extends Component {
             high={this.onHighToLow}
             small={this.onSmallToLarge}
             large={this.onLargeToSmall}
+            zip={zip}
           />
         )}
       </div>

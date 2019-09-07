@@ -12,7 +12,8 @@
   flex-direction: column;
   text-align: center;
   border-radius: 10px;
-  transition: 1s ease;
+  //   transition: 1s ease;
+  animation: sent 1s ease;
 
   .container {
     display: flex;
@@ -37,5 +38,14 @@
   h6 {
     border-bottom: 1px dashed #4f8a10;
     cursor: pointer;
+  }
+}
+
+@keyframes sent {
+  0% {
+    transform: translateY(-20vh);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

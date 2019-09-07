@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Gallery = props => {
-  const { info, houses } = props;
+  const { info, houses, zip } = props;
 
   const results = info.map((res, i) => {
     return (
@@ -16,7 +16,7 @@ const Gallery = props => {
             backgroundImage: `url(${res.img[0]})`
           }}
         >
-          <Link to={`/home/${res._id}`}>
+          <Link to={`/home/${zip}/${res._id}`}>
             <div className="info">
               <div className="infoContainer">
                 <div className="information">

@@ -3,7 +3,7 @@ import Nav from "../../Nav/Nav";
 import Gallery from "./Gallery/Gallery";
 
 const Main = props => {
-  const { info, low, high, small, large, houses } = props;
+  const { info, low, high, small, large, houses, zip } = props;
   return (
     <div className="Search">
       <Nav color="333" />
@@ -31,7 +31,7 @@ const Main = props => {
       </div>
 
       <div className="imgGalleryContainer">
-        <Gallery info={info} houses={houses} />
+        <Gallery info={info} houses={houses} zip={zip} />
       </div>
     </div>
   );
