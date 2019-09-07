@@ -26,6 +26,7 @@ $mainColor: #4ddbff;
     border-radius: 35px;
     color: #fff;
     transition: 0.2s ease;
+    display: flex;
 
     &:hover {
       background: lighten($mainColor, 2%);

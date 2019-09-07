@@ -25,7 +25,8 @@ const Main = props => {
         </div>
         <div className="location">
           <h3>
-            Searching Near <span> {location}</span>
+            Searching Near <span> Pasadena, TX</span>
+            {/* Searching Near <span> {location}</span> */}
           </h3>
         </div>
       </div>

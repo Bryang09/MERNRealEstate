@@ -33,12 +33,12 @@ class Search extends Component {
       .then(res => this.setState({ houses: res.data }))
       .catch(err => console.log(err));
 
-    axios
-      .get(`${ZIP_API_BASE_REQUEST}/${ZIP_API_KEY}/info.json/${zip}/degrees`)
-      .then(res =>
-        this.setState({ location: `${res.data.city}, ${res.data.state}` })
-      )
-      .catch(err => console.log(err));
+    // axios
+    //   .get(`${ZIP_API_BASE_REQUEST}/${ZIP_API_KEY}/info.json/${zip}/degrees`)
+    //   .then(res =>
+    //     this.setState({ location: `${res.data.city}, ${res.data.state}` })
+    //   )
+    //   .catch(err => console.log(err));
   };
 
   onLowToHigh = () => this.setState({ sort: "low" });

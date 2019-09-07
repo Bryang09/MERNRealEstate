@@ -16,7 +16,8 @@ const HomeInfo = props => {
     house,
     onLike,
     id,
-    alreadyLiked
+    alreadyLiked,
+    location
   } = props;
 
   const isLiked = (
@@ -74,6 +75,7 @@ const HomeInfo = props => {
         <div className="location section">
           <h4 className="label">Location</h4>
           <h4 className="value">Los Angeles, California</h4>
+          {/* <h4 className="value">{location}</h4> */}
         </div>
 
         <div className="year section">

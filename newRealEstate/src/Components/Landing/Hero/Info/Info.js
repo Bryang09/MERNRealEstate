@@ -22,29 +22,66 @@ const Info = props => {
         </h3>
       </div>
 
-      <input
-        type="number"
-        value={zip}
-        placeholder="Type Zip Code"
-        onChange={onZip}
-        style={
-          zip === null || zip.length === 0
-            ? { border: "2px solid #4ddbff" }
-            : zip.length < 5
-            ? { border: "2px solid #ff6e6e" }
-            : { border: "2px solid #a0f190" }
-        }
-      />
-      <button type="submit" style={{ opacity: 0 }} />
+      <form onChange={onZip}>
+        <input
+          type="number"
+          value={zip}
+          placeholder="Type Zip Code"
+          style={
+            zip === null || zip.length === 0
+              ? {
+                  borderImage:
+                    "linear-gradient(90deg, #afdeff, #5399e2) 3 / 1 / 0 stretch"
+                }
+              : zip.length < 5
+              ? {
+                  borderImage:
+                    "linear-gradient(90deg, #ff91d3, #ea2e2e) 3 / 1 / 0 stretch"
+                }
+              : {
+                  borderImage:
+                    "linear-gradient(90deg, #91ffbd, #00f3ff) 3 / 1 / 0 stretch"
+                }
+          }
+        />
 
-      <Link
-        to={`/search/${zip}`}
-        className={zip === null || zip.length < 5 ? "link hidden" : "link"}
-      >
-        <h4>Start Searching!</h4>
-      </Link>
+        <Link
+          to={`/search/${zip}`}
+          className={zip === null || zip.length < 5 ? "link hidden" : "link"}
+        >
+          <button
+            type="submit"
+            style={{ height: 0, width: 0, padding: 0, border: 0 }}
+          />
+          <h4>Start Searching!</h4>
+        </Link>
+      </form>
     </div>
   );
 };
 
 export default Info;
+
+{
+  /* <Link
+to={{
+  pathname: `/search/${props.results}`,
+  state: {
+    search: props.results
+  }
+}}
+style={{ height: "25px", marginLeft: "10px" }}
+>
+{" "}
+<button
+  type="submit"
+  style={{ height: 0, width: 0, padding: 0, border: 0 }}
+/>
+<img
+  src="https://img.icons8.com/windows/50/ffffff/search.png"
+  style={{ height: "25px", color: "#fff" }}
+  alt="search"
+  type="submit"
+/>
+</Link> */
+}

@@ -6,7 +6,7 @@ import HomeInfo from "./Info/Info";
 import axios from "axios";
 
 import "./Home.scss";
-import { LOCAL_REQUEST } from "../../keys";
+import { LOCAL_REQUEST, ZIP_API_BASE_REQUEST, ZIP_API_KEY } from "../../keys";
 import Share from "./Info/ShareModal/Share";
 import Mail from "./Info/MailModal/Mail";
 import Sent from "./MailSent/Sent";
@@ -23,7 +23,8 @@ class Home extends Component {
     email: "",
     phone: "",
     submit: false,
-    closeSuccess: false
+    closeSuccess: false,
+    location: ""
   };
 
   onGetRequest = () => {
@@ -37,11 +38,20 @@ class Home extends Component {
 
   componentDidMount = () => {
     const theHousesLiked = JSON.parse(localStorage.getItem("ID"));
+    const zip = this.props.match.params.zip;
+
     // localStorage.clear();
 
     this.setState({ housesLiked: theHousesLiked });
 
     this.onGetRequest();
+
+    // axios
+    //   .get(`${ZIP_API_BASE_REQUEST}/${ZIP_API_KEY}/info.json/${zip}/degrees`)
+    //   .then(res =>
+    //     this.setState({ location: `${res.data.city}, ${res.data.state}` })
+    //   )
+    //   .catch(err => console.log(err));
   };
 
   onMailInfo = e => {
@@ -96,7 +106,8 @@ class Home extends Component {
       email,
       phone,
       submit,
-      closeSuccess
+      closeSuccess,
+      location
     } = this.state;
 
     console.log(submit, closeSuccess);
@@ -158,6 +169,7 @@ class Home extends Component {
           id={this.props.match.params.id}
           alreadyLiked={housesLiked}
           share={share}
+          location={location}
         />
       </div>
     );
