@@ -3,7 +3,7 @@ import Nav from "../../Nav/Nav";
 import Gallery from "./Gallery/Gallery";
 
 const Main = props => {
-  const { info, low, high, small, large, houses, zip } = props;
+  const { info, low, high, small, large, houses, zip, location } = props;
   return (
     <div className="Search">
       <Nav color="333" />
@@ -25,7 +25,7 @@ const Main = props => {
         </div>
         <div className="location">
           <h3>
-            Searching Near <span> Pasadena, TX</span>
+            Searching Near <span> {location}</span>
           </h3>
         </div>
       </div>
