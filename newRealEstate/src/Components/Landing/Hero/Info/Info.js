@@ -33,7 +33,7 @@ const Info = props => {
                   borderImage:
                     "linear-gradient(90deg, #afdeff, #5399e2) 3 / 1 / 0 stretch"
                 }
-              : zip.length < 5
+              : zip.length < 5 || zip.length > 5
               ? {
                   borderImage:
                     "linear-gradient(90deg, #ff91d3, #ea2e2e) 3 / 1 / 0 stretch"
@@ -47,7 +47,11 @@ const Info = props => {
 
         <Link
           to={`/search/${zip}`}
-          className={zip === null || zip.length < 5 ? "link hidden" : "link"}
+          className={
+            zip === null || zip.length < 5 || zip.length > 5
+              ? "link hidden"
+              : "link"
+          }
         >
           <button
             type="submit"

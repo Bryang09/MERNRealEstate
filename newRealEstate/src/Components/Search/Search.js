@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 import Main from "./Main/Main";
-import ErrorComponent from "../Error/Error";
+import ErrorComponent from "./Error/Error";
 
 import "./Search.scss";
 import { LOCAL_REQUEST, ZIP_API_BASE_REQUEST, ZIP_API_KEY } from "../../keys";

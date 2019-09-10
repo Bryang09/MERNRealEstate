@@ -22,17 +22,22 @@ $mainColor: #4ddbff;
     text-decoration: none;
     color: #fff;
     margin: 0;
-    background: $mainColor;
+    background: linear-gradient(90deg, $mainColor, #6660ce);
     border-radius: 35px;
     color: #fff;
-    transition: 0.2s ease;
+    transition: 1s ease;
     display: flex;
 
     &:hover {
-      background: lighten($mainColor, 2%);
+      background: linear-gradient(
+        90deg,
+        lighten(#4ddbff, 5%),
+        lighten(#6660ce, 5%)
+      );
     }
     h4 {
       margin: 0%;
+      transition: 1s ease;
     }
   }
 
@@ -74,6 +79,43 @@ input[type="number"]::-webkit-outer-spin-button {
     span {
       text-transform: uppercase;
       color: $mainColor;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pageDesc {
+    height: 12vh;
+  }
+
+  .info {
+    border-radius: 5px;
+    input[type="number"] {
+      padding: 0.5vh 2vw;
+    }
+
+    .link {
+      margin-bottom: 3vh;
+      padding: 0.8vh 3vw;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageDesc {
+    height: auto;
+    margin-bottom: 3vh;
+
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
     }
   }
 }

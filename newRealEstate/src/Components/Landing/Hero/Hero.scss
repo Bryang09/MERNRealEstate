@@ -19,3 +19,96 @@
   width: 100vw;
   transition: 1s ease;
 }
+
+@media screen and (max-width: 1281px) {
+  .Hero {
+    .heroImage {
+      width: 60%;
+    }
+    .info {
+      width: 40%;
+    }
+  }
+
+  .pageDesc {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(https://photos.zillowstatic.com/cc_ft_1536/IS2zbv7y8krtbo0000000000.webp)
+        no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .heroImage {
+      display: none;
+    }
+    .info {
+      background: rgba(0, 0, 0, 0.7);
+      width: 60%;
+      color: #fff;
+      height: 40vh;
+
+      h2 {
+        color: #fff;
+        span {
+          color: #4ddbff;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .Hero {
+    .info {
+      height: 45vh;
+
+      .link {
+        margin: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .Hero {
+    .info {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .Hero {
+    .info {
+      height: 55vh;
+      width: 80%;
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+      }
+
+      a {
+        h4 {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 1025px) and (min-aspect-ratio: 4/3) {
+}
+
+@media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
+}
