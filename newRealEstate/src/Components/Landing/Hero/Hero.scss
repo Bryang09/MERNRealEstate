@@ -105,7 +105,7 @@
       width: 60%;
     }
     .info {
-      width: 40%;
+      width: 50%;
     }
   }
 }
@@ -113,11 +113,24 @@
 @media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
   .Hero {
     .info {
-      height: 50vh;
-      width: 50%;
+      height: 70vh;
+      width: 55%;
     }
   }
 }
 
 @media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
+  .Hero {
+    .info {
+      height: 70vh;
+      width: 55%;
+
+      .link {
+        padding: 2vh 2vw;
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }

@@ -123,11 +123,29 @@ input[type="number"]::-webkit-outer-spin-button {
 @media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
   .pageDesc {
     height: auto;
+
+    h3 {
+      font-size: 14px;
+    }
   }
 
   .info {
     input[type="number"] {
       margin-bottom: 6vh;
+    }
+
+    .link {
+      h4 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
+  .pageDesc {
+    h3 {
+      font-size: 14px;
     }
   }
 }
