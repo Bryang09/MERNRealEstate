@@ -5,10 +5,10 @@ import Gallery from "./Gallery/Gallery";
 const Main = props => {
   const { info, low, high, small, large, houses, zip, location } = props;
   return (
-    <div className="Search">
-      <Nav color="333" />
+    <div className="Main">
+      <Nav color="fff" />
 
-      <div className="top">
+      <div className="filter">
         <div className="sort">
           <h4 className="lowToHigh option" onClick={low}>
             Low to High
@@ -23,16 +23,17 @@ const Main = props => {
             Largest First
           </h4>
         </div>
-        <div className="location">
-          <h3>
-            Searching Near <span> Pasadena, TX</span>
-            {/* Searching Near <span> {location}</span> */}
-          </h3>
-        </div>
+        <div className="location"></div>
       </div>
 
       <div className="imgGalleryContainer">
-        <Gallery info={info} houses={houses} zip={zip} />
+        <h3>
+          Searching Near <span> Pasadena, TX</span>
+          {/* Searching Near <span> {location}</span> */}
+        </h3>
+        <div className="gallery">
+          <Gallery info={info} houses={houses} zip={zip} location={location} />
+        </div>
       </div>
     </div>
   );

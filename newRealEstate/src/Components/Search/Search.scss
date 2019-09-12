@@ -4,24 +4,105 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  // flex-direction: column;
+
+  .Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .filter {
+      display: flex;
+      // margin-top: 15vh;
+      width: 30%;
+      flex-direction: column-reverse;
+      background: #3106c8;
+      min-height: 100vh;
+      max-height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .sort {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+
+        .option {
+          // width: 21%;
+          margin: auto 2%;
+          text-align: center;
+          border-radius: 35px;
+          font-weight: 400;
+          padding: 1vh 3vw;
+          cursor: pointer;
+          margin: 1vh auto;
+          background: #fff;
+          color: #3106c8;
+          transition: 1s ease;
+
+          &:hover {
+            background: darken(#3106c8, 10%);
+            color: #fff;
+          }
+        }
+
+        // .lowToHigh {
+        //   background: #61ecbc;
+        // }
+        // .highToLow {
+        //   background: #4ddbff;
+        // }
+
+        // .smallToLarge {
+        //   background: #c170f9;
+        // }
+        // .largeToSmall {
+        //   background: #ff6868;
+        // }
+      }
+
+      .location {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
 
   .imgGalleryContainer {
     display: flex;
-    height: 80%;
-    width: 90%;
-    overflow-y: auto;
+    height: 90%;
+    width: 70%;
+
     margin-left: 4vw;
     margin-top: 5vh;
     margin: 5vh 5vw 0;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    &::-webkit-scrollbar {
-      display: none;
+    h3 {
+      color: #cecece;
+
+      span {
+        color: #333;
+      }
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: auto;
+      height: 90%;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
     .imgContainer {
       min-width: 48%;
-      height: 70%;
+      height: 40%;
       margin: 1%;
       justify-content: center;
       align-items: flex-end;
@@ -71,61 +152,32 @@
     }
   }
 
-  // $ yarn add @fortawesome/fontawesome-svg-core
-  // $ yarn add @fortawesome/free-solid-svg-icons
-  // $ yarn add @fortawesome/react-fontawesome
-
-  .top {
-    display: flex;
-    margin-top: 15vh;
-    width: 88vw;
-
-    .sort {
-      width: 60%;
-      display: flex;
-
-      .option {
-        width: 21%;
-        margin: auto 2%;
-        text-align: center;
-        border-radius: 35px;
-        font-weight: 400;
-        padding: 1vh 0;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      .lowToHigh {
-        background: #61ecbc;
-      }
-      .highToLow {
-        background: #4ddbff;
-      }
-
-      .smallToLarge {
-        background: #c170f9;
-      }
-      .largeToSmall {
-        background: #ff6868;
-      }
-    }
-
-    .location {
-      width: 40%;
-      display: flex;
-      justify-content: flex-end;
-      h3 {
-        color: #cecece;
-
-        span {
-          color: #333;
-        }
-      }
-    }
+  #houseLink {
+    margin-top: 2vh;
+    padding: 1vh 3vw;
   }
 }
 
-#houseLink {
-  margin-top: 2vh;
-  padding: 1vh 3vw;
+@media screen and (max-width: 1192px) {
+}
+
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 1025px) and (min-aspect-ratio: 4/3) {
+}
+
+@media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
 }
